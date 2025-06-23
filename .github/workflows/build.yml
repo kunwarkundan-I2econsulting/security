@@ -21,10 +21,10 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd doc
+          cd docs
           npm install
 
       - name: Build Angular project
         run: |
-          cd doc
+          cd docs
           npm run build
