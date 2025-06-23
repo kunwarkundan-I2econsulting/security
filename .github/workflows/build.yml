@@ -24,3 +24,16 @@ jobs:
       - name: Build Angular project
         run: |
           npm run build
+      - name: Move build output to ./docs folder
+        run: |
+          rm -rf ./docs        # Clean old docs if they exist
+          mv ./docs ./docs
+      - name: Commit and push docs
+        run: |
+          git config --global user.email "kunwar.kundan@i2econsulting"
+          git config --global user.name "kunwarkundan-I2econsulting"
+          git add docs
+          git commit -m "Update docs from build"
+          git push
+
+
