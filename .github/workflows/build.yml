@@ -26,8 +26,7 @@ jobs:
           npm run build
       - name: Move build output to ./docs folder
         run: |
-          rm -rf ./docs        # Clean old docs if they exist
-          mv ./docs ./docs
+          ls -la /home/runner/work/security/security/docs
       - name: Commit and push docs
         run: |
           git config --global user.email "kunwar.kundan@i2econsulting"
